@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip} from 'recharts';
 
-export default function TestChart() {
+export default function TestRechart() {
   const data = [
     {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
     {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
