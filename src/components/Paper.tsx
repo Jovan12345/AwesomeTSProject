@@ -1,14 +1,26 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import * as React from 'react';
+import {Text, View, StyleSheet} from 'react-native';
+import UserInfo from './UserInfo';
 
-export default class Paper extends Component {
-    render() {
-        return (
-            <View>
-                <Text> textInComponent Paper </Text>
-                <Button onPress={() => console.log('pressed')}>Press me</Button>
-            </View>
-        )
-    }
-}
+const MyComponent = () => {
+  return (
+    <View style={style.containerr}>
+      <View style={style.container}>
+        <UserInfo />
+      </View>
+      <Text style={style.container}>Hello1</Text>
+      <Text style={style.container}>Hello2</Text>
+    </View>
+  );
+};
+
+const style = StyleSheet.create({
+  containerr: {
+    flexDirection: 'row',
+  },
+  container: {
+    flex: 1,
+  },
+});
+
+export default MyComponent;
