@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 //import 'react-native-gesture-handler';
 import React from 'react';
 
@@ -7,6 +8,15 @@ import { View, Text } from 'react-native';
 // import TestVictoryNativeWeb from './components/TestVictoryNativeWeb';
 import Paper from './components/Paper';
 
+
+//Aplify Auth
+import Amplify, { Auth } from 'aws-amplify';
+import awsconfig from './aws-exports';
+Amplify.configure(awsconfig);
+
+// Prebuilt UI component
+// @ts-ignore
+import { withAuthenticator } from 'aws-amplify-react-native';
 
 const App = () => {
   return (
@@ -23,4 +33,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default withAuthenticator(App);
