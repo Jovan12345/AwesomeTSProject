@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
-import { Text, View } from 'react-native';
-import { Button } from 'react-native-paper';
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ActivityIndicator, Colors, Avatar } from 'react-native-paper';
 
-export default class Paper extends Component {
-    render() {
-        return (
-            <View>
-                <Text> textInComponent Paper </Text>
-                <Button onPress={() => console.log('pressed')}>Press me</Button>
-            </View>
-        )
-    }
+const Paper = () => {
+    return (
+        <View>
+            <Button onPress={() => console.log('pressed')}>Press me!</Button>
+            <ActivityIndicator animating={true} color={Colors.red800} />
+            <Avatar.Image size={64} source={require('../assets/anon.jpg')} />
+        </View>
+    )
 }
+
+export default Paper;
