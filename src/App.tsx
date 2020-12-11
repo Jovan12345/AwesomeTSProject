@@ -5,7 +5,18 @@ import React from 'react';
 import Paper from './components/Paper';
 
 const App = () => {
-  return <Paper />;
+  return (
+    <View style={{ marginTop: '2%', marginLeft: '3%' }}>
+      <Text style={{ fontSize: 25, fontWeight: "600", color: 'darkblue', marginBottom: 40, alignSelf: "center" }}>Chart components</Text>
+      <View>
+        {/* <TestRechart /> */}
+        {/* <TestVictory /> */}
+        {/* {Platform.OS === 'web' ? <TestVictoryNativeWeb />
+         : <TestVictory />} */}
+        <Paper />
+      </View>
+    </View>
+  );
 };
 
 export default App;

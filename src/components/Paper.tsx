@@ -1,33 +1,15 @@
-import * as React from 'react';
-import {Text, View, StyleSheet} from 'react-native';
-import UserInfo from './UserInfo';
-import PhysicalActivity from './PhysicalActivity';
+import React from 'react';
+import { View } from 'react-native';
+import { Button, ActivityIndicator, Colors, Avatar } from 'react-native-paper';
 
-const MyComponent = () => {
-  return (
-    <View style={style.containerr}>
-      <View style={{marginRight: 60}}>
-        <UserInfo />
-      </View>
-      <View style={{marginRight: 60}}>
-        <PhysicalActivity />
-      </View>
-      <Text>
-        jasdkljjkdsajkdsajkdaslkdjsakjldsdkjdkjskjdsakjdsalkdjsaldsakjldsakjdsakjl
-      </Text>
-    </View>
-  );
-};
+const Paper = () => {
+    return (
+        <View>
+            <Button onPress={() => console.log('pressed')}>Press me!</Button>
+            <ActivityIndicator animating={true} color={Colors.red800} />
+            <Avatar.Image size={64} source={require('../assets/anon.jpg')} />
+        </View>
+    )
+}
 
-const style = StyleSheet.create({
-  containerr: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-  },
-  container: {
-    width: '33%',
-  },
-});
-
-export default MyComponent;
+export default Paper;
