@@ -1,5 +1,4 @@
 import React from 'react';
-import { View, Text } from 'react-native';
 // import TestRechart from './components/TestRechart';
 // import TestVictory from './components/TestVictoryNative';
 // import TestVictoryNativeWeb from './components/TestVictoryNativeWeb';
